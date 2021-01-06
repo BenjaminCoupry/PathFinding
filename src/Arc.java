@@ -1,35 +1,14 @@
-public class Arc {
-    Place start;
-    Place finish;
-    double cout;
+public interface Arc {
 
-    public Arc(Place start, Place finish, double cout) {
-        this.start = start;
-        this.finish = finish;
-        this.cout = cout;
-    }
 
-    public Place getStart() {
-        return start;
-    }
+    Place getStart();
 
-    public void setStart(Place start) {
-        this.start = start;
-    }
+    void setStart(Place start);
 
-    public Place getFinish() {
-        return finish;
-    }
+    Place getFinish();
 
-    public void setFinish(Place finish) {
-        this.finish = finish;
-    }
+    void setFinish(Place finish);
 
-    public double getCout() {
-        return cout;
-    }
+    double getCout();
 
-    public void setCout(double cout) {
-        this.cout = cout;
-    }
 }
