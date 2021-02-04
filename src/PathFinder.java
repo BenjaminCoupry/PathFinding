@@ -10,23 +10,16 @@ import java.util.List;
 public class PathFinder {
     public static void main(String[] args)
     {
-        List<Arc> arcs = GenerateurNetwork.genererNuageRoutier(100,2);
-
-            Place init = arcs.get(0).getStart();
-            Place fin = arcs.get(arcs.size() - 1).getFinish();
-            List<Place> passage = cheminPlusCourt(arcs, init, fin);
-        if(passage != null) {
-            for (Place p : passage) {
-                System.out.println(p.getNom());
-            }
-        }
-        GenerateurNetwork.dessinerNuage(arcs, passage, 1000,Color.YELLOW, "L:/Lab/gr1");
     }
 
 
     public static List<Place> cheminPlusCourt(List<? extends Arc> arcs, Place start, Place finish)
     {
         InfoChemin ic = calculerDistances(arcs,start);
+        return reconstituerChemin(ic.getPredecesseurs(),start,finish);
+    }
+    public static List<Place> cheminPlusCourt(InfoChemin ic, Place start, Place finish)
+    {
         return reconstituerChemin(ic.getPredecesseurs(),start,finish);
     }
 
