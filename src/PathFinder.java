@@ -8,10 +8,6 @@ import java.util.List;
 
 
 public class PathFinder {
-    public static void main(String[] args)
-    {
-    }
-
 
     public static List<Place> cheminPlusCourt(List<? extends Arc> arcs, Place start, Place finish)
     {

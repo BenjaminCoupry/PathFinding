@@ -9,11 +9,6 @@ import java.util.List;
 import java.util.Random;
 
 public class GenerateurNetwork {
-    public static void main(String[] args)
-    {
-        GenerateurNetwork.genererVille(3,2000,0.3,0.05,0.4,
-                0.01,0.1,0.1,0.01,2);
-    }
     public static List<Arc> genererNuage(int n)
     {
         Random r= new Random();
